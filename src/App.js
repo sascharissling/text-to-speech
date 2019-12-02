@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import React from "react";
+import styled from "@emotion/styled";
+import GlobalStyles from "./GlobalStyles";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+//STYLE Start
+
+const AppContainer = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+`;
+
+const ContentContainer = styled.main`
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  width: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+  overflow-x: auto;
+`;
+
+//STYLE End
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <ContentContainer>Hello</ContentContainer>
+    </AppContainer>
   );
 }
 
